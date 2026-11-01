@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operators Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Operators Questions</h1>
+        <p>Choose a question to see its answer.</p>
+    </header>
+
+    <main>
+        <a href="index.html" class="back">← Back to Topics</a>
+
+        <div class="question" onclick="showAnswer('q1')">
+            Question 1: Write a program to show that example of pre-increment.
+        </div>
+
+        <div class="answer" id="q1">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a = 5;
+    int b = ++a;
+    printf("a=%d, b=%d", a, b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+a=6, b=6
+	</code></pre>
+	</div>
+             <div class="question" onclick="showAnswer('q2')">
+            Question 2: Write a program to show that example of post-increment.
+        </div>
+
+        <div class="answer" id="q2">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a = 5;
+    int b = a++;
+    printf("a=%d, b=%d", a, b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+a=6, b=5
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q3')">
+            Question 3: Write a program to show that example of pre-decrement.
+        </div>
+
+        <div class="answer" id="q3">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a = 5;
+    int b = --a;
+    printf("a=%d, b=%d", a, b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+a=4, b=4
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q4')">
+            Question 4: Write a program to show that example of post-decrement.
+        </div>
+
+        <div class="answer" id="q4">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a = 5;
+    int b = a--;
+    printf("a=%d, b=%d", a, b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+a=5, b=4
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q5')">
+            Question 5: Write a program to enter 2 numbers from user add the number and display the answer, again take 2 numbers from user subtract the number and display the answer, again take 2 numbers from user multiply the number and display the answer, again take 2 numbers from user divide the number and display the answer, again take 2 numbers from user find the remainder and display the answer.
+        </div>
+
+        <div class="answer" id="q5">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a,b;
+    printf("Enter two numbers for addition: ");
+    scanf("%d %d",&a,&b);
+    printf("Addition=%d\n", a+b);
+
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d %d",&a,&b);
+    printf("Subtraction=%d\n", a-b);
+
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d %d",&a,&b);
+    printf("Multiplication=%d\n", a*b);
+
+    printf("Enter two numbers for division: ");
+    scanf("%d %d",&a,&b);
+    printf("Division=%d\n", a/b);
+
+    printf("Enter two numbers for remainder: ");
+    scanf("%d %d",&a,&b);
+    printf("Remainder=%d\n", a%b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter two numbers for addition: 2 2
+Addition=4
+Enter two numbers for subtraction: 2 2
+Subtraction=0
+Enter two numbers for multiplication: 2 2
+Multiplication=4
+Enter two numbers for division: 2 2
+Division=1
+Enter two numbers for remainder: 2 2
+Remainder=0
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q6')">
+            Question 6: Write a program to enter a number from the user,the length of the number is depend on the user, programmer should print the last digit of number.
+        </div>
+
+        <div class="answer" id="q6">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Last digit: %d", num%10);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter a number: 12
+Last digit: 2
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q7')">
+            Question 7: Enter a decimal number from the user(float) and print the right hand side of the decimal point.
+        </div>
+
+        <div class="answer" id="q7">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    float num;
+    int rhs;
+    printf("Enter a decimal number: ");
+    scanf("%f", &num);
+    rhs = (num - (int)num) * 100000; // up to 5 decimal places
+    printf("Right-hand side: %d", rhs);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter a decimal number: 2.4
+Right-hand side: 40000
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q8')">
+            Question 8: Enter a number from user and find out cube of numnbers.
+        </div>
+
+        <div class="answer" id="q8">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Cube: %d", num*num*num);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter a number: 2
+Cube: 8
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q9')">
+            Question 9: Enter float number from user and round of the number.
+        </div>
+
+        <div class="answer" id="q9">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    float num;
+    printf("Enter a float number: ");
+    scanf("%f", &num);
+    printf("Rounded: %d", (int)(num + 0.5));
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter a float number: 2.4
+Rounded: 2
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q10')">
+            Question 10: Enter a lower case character from user and print it into upper case.
+        </div>
+
+        <div class="answer" id="q10">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    char ch;
+    printf("Enter a lowercase character: ");
+    scanf(" %c", &ch);
+    printf("Uppercase: %c", ch-32);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter a lowercase character: a
+Uppercase: A
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q11')">
+            Question 11: Enter marks of students and calculate average of student's marks.
+        </div>
+
+        <div class="answer" id="q11">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int n, i, marks, sum=0;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    for(i=1;i<=n;i++){
+        printf("Enter marks of student %d: ", i);
+        scanf("%d",&marks);
+        sum += marks;
+    }
+    printf("Average marks: %f", (float)sum/n);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter number of students: 3
+Enter marks of student 1: 77
+Enter marks of student 2: 58
+Enter marks of student 3: 98
+Average marks: 77.67
+	</code></pre>
+	</div>
+ <div class="question" onclick="showAnswer('q12')">
+            Question 12: Calculate simple interest = (P X R X T)/100.
+        </div>
+
+        <div class="answer" id="q12">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    float P, R, T, SI;
+    printf("Enter Principal, Rate, Time: ");
+    scanf("%f",&P);
+    printf("Enter Rate: ");
+    scanf("%f",&R);
+    printf("Enter Time: ");
+    scanf("%f",&T);
+    SI = (P*R*T)/100;
+    printf("Simple Interest: %f", SI);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter Principal, Rate, Time: 2 3 4
+Simple Interest: 0.24
+	</code></pre>
+	</div>
+
+        <!-- Copy a question and answer block to add more questions -->
+
+    </main>
+
+    <footer>
+        <p>C Programming Guide</p>
+    </footer>
+
+</body>
+</html>

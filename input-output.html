@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Output Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Input/Output Questions</h1>
+        <p>Choose a question to see its answer.</p>
+    </header>
+
+    <main>
+        <a href="index.html" class="back">← Back to Topics</a>
+
+        <div class="question" onclick="showAnswer('q1')">
+            Question 1: Write a program to print the message:
+Today i made my first C program.
+        </div>
+
+        <div class="answer" id="q1">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    printf("tody i made my fist c program");
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Today I made my first C program.
+	</code></pre>
+	</div>
+            
+    <div class="question" onclick="showAnswer('q2')">
+            Question 2: Write a program to read a character from the keyboard and display it on the screen.
+        </div>
+
+        <div class="answer" id="q2">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    char ch;
+    printf("enter a character: ");
+    scanf("%c",&ch);
+    printf("the character is: %c",ch);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Type a character: k
+The character is: k
+	</code></pre>
+	</div>
+
+  <div class="question" onclick="showAnswer('q3')">
+            Question 3: Write a program to read only 4 characters from the keyboard and display it on the screen in a seperate line.
+        </div>
+
+        <div class="answer" id="q3">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    char c,a,b,d;
+    printf("enter 4 characters : ");
+    scanf("%c",&a);
+    scanf("%c",&b);
+    scanf("%c",&c);
+    scanf("%c",&d);
+    printf("the characters are:\n%c\n%c\n%c\n%c\n",a,b,c,d);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+enter 4 characters : a
+b
+c
+d
+the characters are:
+a
+b
+c
+d
+
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q4')">
+            Question 4: Write a program ti print your name it center of the first line.
+        </div>
+
+        <div class="answer" id="q4">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    printf("\t\t\t\t\t    PARBHAT\n");
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+                               PARBHAT                     
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q5')">
+            Question 5: Write a program to store single qoute and print variable to show single qoute on output screen.
+        </div>
+
+        <div class="answer" id="q5">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    char ch;
+    ch='\'';
+    printf("%c %c",ch,ch);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+''
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q6')">
+            Question 6: Write a program to print your name on output screen but your name should blink 5 times.
+        </div>
+
+        <div class="answer" id="q6">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main(){
+    int i;
+    for(i=1;i<=5;i++){
+     
+        printf("abc");
+        delay(500);
+       clrscr();
+
+       delay(500);
+    }
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+abc
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q7')">
+            Question 7: Write a program to display this output.
+#include
+#include
+#include
+void main()
+{
+clrscr();
+printf("hello,welcome to c");
+delay(5000);
+}
+        </div>
+
+        <div class="answer" id="q7">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+ #include &lt;conio.h&gt; 
+ #include &lt;dos.h&gt; 
+ void main () {
+     clrscr();
+      printf("hello,welcome to c");
+       delay(5000); 
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+hello,welcome to c
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q8')">
+            Question 8: Write a program to print your name at the center of the page.
+        </div>
+
+        <div class="answer" id="q8">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    printf("\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t     PARBHAT");
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+
+
+
+
+
+
+                                             PARBHAT
+
+
+
+
+
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q9')">
+            Question 9: Enter password display like ******.
+        </div>
+
+        <div class="answer" id="q9">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    char a,b,c,d,e,f;
+    printf("enter password(6 characters): ");
+    scanf("%c",&a);
+    scanf("%c",&b);
+    scanf("%c",&c);
+    scanf("%c",&d);
+    scanf("%c",&e)
+    scanf("%c",&f);
+    printf("pass is ******");
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+enter password(6 characters): hsgdyd
+pass is ******
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q10')">
+            Question 10: Enter two character from user and print ASCII value.
+        </div>
+
+        <div class="answer" id="q10">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+    char a;
+    char b;
+    printf("enter first character: ");
+    scanf("%c",&a);
+    printf("enter second character: ");
+    scanf("%c",&b);
+    printf("ascii value is %d and %d",a,b);
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+enter first character: x
+enter second character: y
+ascii value is 120 and 121
+	</code></pre>
+	</div>
+  <div class="question" onclick="showAnswer('q11')">
+            Question 11: Print all ASCII character 0 to 127.
+        </div>
+
+        <div class="answer" id="q11">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main(){
+int i;
+for(i=0;i<=127;i++){
+    printf("%c\n",i);
+}
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+ 
+!
+"
+#
+$
+%
+&
+'
+(
+)
+*
++
+,
+-
+.
+/
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+:
+;
+<
+=
+> 
+?
+@
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+[
+\
+]
+^
+_
+`
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+{
+|
+}
+~
+⌂
+	</code></pre>
+	</div>
+
+      <!-- Copy a question and answer block to add more questions -->
+
+    </main>
+
+    <footer>
+        <p>C Programming Guide</p>
+    </footer>
+
+</body>
+</html>

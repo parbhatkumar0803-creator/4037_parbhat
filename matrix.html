@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Dimensional Array Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Multi Dimensional Array Questions</h1>
+        <p>Choose a question to see its answer.</p>
+    </header>
+
+    <main>
+        <a href="index.html" class="back">← Back to Topics</a>
+
+        <div class="question" onclick="showAnswer('q1')">
+            Question 1: Enter the four number from user and print it into matrix.
+        </div>
+
+        <div class="answer" id="q1">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int mat[2][2], i, j;
+    printf("Enter 4 numbers: ");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    printf("Matrix:\n");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            printf("%d\t", mat[i][j]);
+        }
+        printf("\n");
+    }</code></pre>
+		<h3>Output</h3>
+            <pre><code>
+Enter 4 numbers: 1 2 3 4
+Matrix:
+1       2
+3       4
+	</code></pre>
+	</div>
+   <div class="question" onclick="showAnswer('q2')">
+            Question 2: Enter the matrix from the user and transpose them.
+        </div>
+
+        <div class="answer" id="q2">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int mat[2][2], trans[2][2], i, j;
+    printf("Enter 4 numbers for 2x2 matrix: ");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            scanf("%d",&mat[i][j]);
+            trans[j][i] = mat[i][j];
+        }
+    }
+    printf("Transpose Matrix:\n");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            printf("%d\t", trans[i][j]);
+        }
+        printf("\n");
+    }
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter 4 numbers for 2x2 matrix: 1 2 3 4      
+Transpose Matrix:
+1       3
+2       4
+	</code></pre>
+	</div>
+   <div class="question" onclick="showAnswer('q3')">
+            Question 3: Enter two matrix from user and add them.
+        </div>
+
+        <div class="answer" id="q3">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a[2][2], b[2][2], sum[2][2], i, j;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&b[i][j]);
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            sum[i][j] = a[i][j] + b[i][j];
+    printf("Sum Matrix:\n");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            printf("%d\t", sum[i][j]);
+        printf("\n");
+    }
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter 4 numbers for first matrix: 1 2 3 4
+Enter 4 numbers for second matrix: 1 2 3 4
+Sum Matrix:
+2       4
+6       8
+	</code></pre>
+	</div>
+   <div class="question" onclick="showAnswer('q4')">
+            Question 4: Enter two matrix from user and subtract them.
+        </div>
+
+        <div class="answer" id="q4">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a[2][2], b[2][2], sub[2][2], i, j;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&b[i][j]);
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            sub[i][j] = a[i][j] - b[i][j];
+    printf("Subtraction Matrix:\n");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            printf("%d\t", sub[i][j]);
+        printf("\n");
+
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter 4 numbers for first matrix: 1 2 3 4
+Enter 4 numbers for second matrix: 1 2 3 4
+Subtraction Matrix:
+0       0
+0       0
+	</code></pre>
+	</div>
+   <div class="question" onclick="showAnswer('q5')">
+            Question 5: Enter two matrix from the user and multiply them.
+        </div>
+
+        <div class="answer" id="q5">
+            <h3>Code</h3>
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+void main() {
+    int a[2][2], b[2][2], mul[2][2], i, j, k;
+    printf("Enter 4 numbers for first matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&a[i][j]);
+    printf("Enter 4 numbers for second matrix: ");
+    for(i=0;i<2;i++)
+        for(j=0;j<2;j++)
+            scanf("%d",&b[i][j]);
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            mul[i][j]=0;
+            for(k=0;k<2;k++)
+                mul[i][j] += a[i][k]*b[k][j];
+        }
+    }
+    printf("Multiplication Matrix:\n");
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            printf("%d\t", mul[i][j]);
+        printf("\n");
+    }
+
+}</code></pre>
+	<h3>Output</h3>
+            <pre><code>
+Enter 4 numbers for first matrix: 1 2 3 4
+Enter 4 numbers for second matrix: 1 2 3 4
+Multiplication Matrix:
+7       10
+15      22
+	</code></pre>
+	</div>
+       
+        <!-- Copy a question and answer block to add more questions -->
+
+    </main>
+
+    <footer>
+        <p>C Programming Guide</p>
+    </footer>
+
+</body>
+</html>
