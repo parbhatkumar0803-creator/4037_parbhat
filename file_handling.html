@@ -24,11 +24,107 @@
             <h3>Code</h3>
             <pre><code>
 #include &lt;stdio.h&gt;
+#include < dos.h > 
+#include < conio.h >
 
+void main()
+{
+
+FILE *fp1, *fp2;
+char file1[10], file2[10];
+
+int data;
+
+clrscr();
+
+printf("Enter File1 Name: ");
+scanf("%s", file1);
+
+printf("Enter Data: \n");
+
+	fp1 = fopen(file1, "w");
+
+if(fp1==NULL)
+{
+ printf("Error! File1 Cannot Open..");
+}
+
+else
+{
+   do
+   {
+	data=getch();  //enter data from use
+
+	if(data!=19)
+	{
+	   if(data==13)
+	   {
+		printf("\n");
+		fputc('\n', fp1);
+	   }
+	   else
+	   {
+		printf("%c", data);
+		fprintf( fp1 , "%c" , data);
+	   }
+	}
+   }
+	while(data!=19);
+
+	fclose(fp1);
+}			//end of else block
+
+
+printf("\n\n Enter File2 Name Where You Want To Copy Above Content or File: ");
+scanf("%s", file2);
+
+fp2 = fopen(file2, "w");
+fp1 = fopen(file1, "r");
+
+if( fp1 == NULL || fp2 == NULL )
+{
+	printf("Error In Opening File");
+}
+
+else
+{
+   do
+     {
+	data = fgetc(fp1);              //storing in data (content of f1)
+
+	if(data!=-1)
+	{
+	   fprintf( fp2 , "%c", data);   //copying it
+	   printf("%c", data);
+	}
+     }
+
+   while(data!= -1);
+
+   printf("Copy Success..!!");
+}
+
+
+
+delay(3000);
+}
 
 }</code></pre>
 	<h3>Output</h3>
-            <pre><code></code></pre>
+            <pre><code>
+Enter File1 Name: DATA.TXT
+
+Enter Data:
+Hello World! This is a file handling program.           
+Press Ctrt+S to stop entering and save
+
+
+Enter File2 Name Where You Want To Copy Above Content or File:
+COPY.TXT
+
+Hello World! This is a file handling program.
+Copy Success..!!
+</code></pre>
 	</div>
        
 	<div class="question" onclick="showAnswer('q2')">
@@ -39,11 +135,86 @@
             <h3>Code</h3>
             <pre><code>
 #include &lt;stdio.h&gt;
+#include < dos.h > 
+#include < conio.h >
 
+ void main()
+{
+    FILE *fp;
+    char file1[10];
+    int data, count=0;
+
+    clrscr();
+
+    printf("Enter File Name: ");
+    scanf("%s", file1);
+
+    printf("Enter Data: \n");
+
+    fp = fopen(file1, "w");
+
+    if(fp == NULL)
+    {
+        printf("Error! File Cannot Open..");
+    }
+    else
+    {
+        do
+        {
+            data = getch();
+
+            if(data != 19)
+            {
+                if(data == 13)
+                {
+                    printf("\n");
+                    fputc('\n', fp);
+                }
+                else
+                {
+                    printf("%c", data);
+                    fprintf(fp, "%c", data);
+                }
+            }
+        }
+        while(data != 19);
+
+        fclose(fp);
+    }
+
+    fp = fopen(file1, "r");
+
+    if(fp == NULL)
+    {
+        printf("Error In Opening File");
+    }
+    else
+    {
+        while((fgetc(fp)) != EOF)       //EOF means end of file = -1
+        {
+            count++;
+        }
+
+        fclose(fp);
+
+        printf("\n\nTotal Number Of Characters In File = %d", count);
+    }
+
+    delay(3000);
 
 }</code></pre>
 	<h3>Output</h3>
-            <pre><code></code></pre>
+            <pre><code>
+ Enter File Name: DATA.TXT     
+Press Ctrt+S to stop entering and save
+
+
+Enter Data:
+HELLO WORLD               
+
+Total Number Of Characters In File = 11
+    
+</code></pre>
 	</div>
         
 	<div class="question" onclick="showAnswer('q3')">
@@ -55,10 +226,97 @@
             <pre><code>
 #include &lt;stdio.h&gt;
 
+#include < dos.h > 
+#include < conio.h >
+
+ void main()
+{
+    FILE *fp;
+    char file1[10];
+    int data, count=0, inword=0;
+
+    clrscr();
+
+    printf("Enter File Name: ");
+    scanf("%s", file1);
+
+    printf("Enter Data: \n");
+
+    fp = fopen(file1, "w");
+
+    if(fp == NULL)
+    {
+        printf("Error! File Cannot Open..");
+    }
+    else
+    {
+        do
+        {
+            data = getch();
+
+            if(data != 19)
+            {
+                if(data == 13)
+                {
+                    printf("\n");
+                    fputc('\n', fp);
+                }
+                else
+                {
+                    printf("%c", data);
+                    fprintf(fp, "%c", data);
+                }
+            }
+        }
+        while(data != 19);
+
+        fclose(fp);
+    }
+
+    fp = fopen(file1, "r");
+
+    if(fp == NULL)
+    {
+        printf("Error In Opening File");
+    }
+    else
+    {
+        while((data = fgetc(fp)) != EOF)
+        {
+            if(data == ' ' || data == '\n' || data == '\t')
+            {
+                inword = 0;
+            }
+            else if(inword == 0)
+            {
+                count++;
+                inword = 1;
+            }
+        }
+
+        fclose(fp);
+
+        printf("\n\nTotal Number Of Words In File = %d", count);
+    }
+
+    delay(3000);
 
 }</code></pre>
 	<h3>Output</h3>
-            <pre><code></code></pre>
+            <pre><code>
+ Enter File Name: DATA.TXT       
+Press Ctrt+S to stop entering and save
+
+
+Enter Data:       
+// entered by user
+
+Hello World
+This is File Handling         
+
+
+Total Number Of Words In File = 5       
+</code></pre>
 	</div>
                     
 
